@@ -86,4 +86,4 @@ updateProduct(1, { price: 30, available: false, name: "Juice" });
 
 filterAvailableProducts();
 
-filterProductsByCategory("Electronics");
+filterProductsByCategory("Kitchenware");

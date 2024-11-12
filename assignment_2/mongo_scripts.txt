@@ -1,12 +1,10 @@
-// Create the customers collection and insert documents
-
 let customer1 = db.customers.insertOne( {
-    "name": "John Doe",
-    "email": "johndoe@example.com",
+    "name": "Aditya Sharma",
+    "email": "adityasharma@example.com",
     "address": {
-      "street": "123 Main St",
-      "city": "Springfield",
-      "zipcode": "12345"
+      "street": "907-B Railway Colony",
+      "city": "Varanasi",
+      "zipcode": "221004"
     },
     "phone": "555-1234",
     "registration_date": ISODate("2023-01-01T12:00:00Z")
@@ -14,11 +12,11 @@ let customer1 = db.customers.insertOne( {
 
 
 let customer2 = db.customers.insertOne({
-    "name": "Jane Smith",
-    "email": "janesmith@example.com",
+    "name": "Varun Jaiswal",
+    "email": "varunjaiswal@example.com",
     "address": {
-      "street": "456 Elm St",
-      "city": "Riverside",
+      "street": "1/19 Shuklaganj",
+      "city": "Kanppur",
       "zipcode": "54321"
     },
     "phone": "555-5678",
@@ -27,11 +25,11 @@ let customer2 = db.customers.insertOne({
 
 
 let customer3 = db.customers.insertOne({
-    "name": "Alice Johnson",
-    "email": "alicejohnson@example.com",
+    "name": "Shruti Sinha",
+    "email": "shrutisinha@example.com",
     "address": {
-      "street": "789 Oak St",
-      "city": "Lakeside",
+      "street": "gt road",
+      "city": "Pryagraj",
       "zipcode": "67890"
     },
     "phone": "555-8765",
@@ -39,11 +37,11 @@ let customer3 = db.customers.insertOne({
   }).insertId;
 
 let customer4 = db.customers.insertOne({
-    "name": "Michael Brown",
-    "email": "michaelbrown@example.com",
+    "name": "Shivam Dubey",
+    "email": "shivamdubey@example.com",
     "address": {
-      "street": "101 Maple Ave",
-      "city": "Hillcrest",
+      "street": "civil lines",
+      "city": "Delhi",
       "zipcode": "24680"
     },
     "phone": "555-4321",
@@ -52,11 +50,11 @@ let customer4 = db.customers.insertOne({
 
 
 let customer5 = db.customers.insertOne({
-    "name": "Emily Davis",
-    "email": "emilydavis@example.com",
+    "name": "Yamina Shah",
+    "email": "yaminishah@example.com",
     "address": {
-      "street": "202 Pine St",
-      "city": "Brookhaven",
+      "street": "ck-15 maal road",
+      "city": "Indore",
       "zipcode": "13579"
     },
     "phone": "555-2345",
@@ -84,7 +82,7 @@ Part 1
 
 2. Find Orders for a Specific Customer: 
 
-let customer = db.customers.findOne({ name: "John Doe" });
+let customer = db.customers.findOne({ name: "Aditya Sharma" });
 db.orders.find({ customer_id: customer._id });
 
 
@@ -224,7 +222,7 @@ db.orders.aggregate([
 
 2. Find All Products Ordered by a Specific Customer:
 
-const customer = db.customers.findOne({ "name": "John Doe" });
+const customer = db.customers.findOne({ "name": "Aditya Sharma" });
 db.orders.aggregate([
     { $match: { "customer_id": customer._id } },
     { $unwind: "$items" },
@@ -263,7 +261,7 @@ db.orders.aggregate([
 
 4. Add a New Order for an Existing Customer:
 
-const customer = db.customers.findOne({ "name": "Jane Smith" });
+const customer = db.customers.findOne({ "name": "Varun Jaiswal" });
 db.orders.insertOne({
     "order_id": "ORD123457",
     "customer_id": customer._id,
