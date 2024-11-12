@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Gaming Laptop",
+    "category": "Electronics",
+    "price": 1300,
+    "available": false
+  },
+  {
+    "id": 2,
+    "name": "Smartphone",
+    "category": "Electronics",
+    "price": 800,
+    "available": false
+  },
+  {
+    "id": 3,
+    "name": "Desk Chair",
+    "category": "Furniture",
+    "price": 150,
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Table",
+    "category": "Furniture",
+    "price": 200,
+    "available": true
+  }
+]
